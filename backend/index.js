@@ -15,7 +15,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const corsOptions = {
-  origin: process.env.CLIENT_ORIGIN || "*", // Replace with your client's origin
+  origin: "*", // Allow all origins for development
 };
 
 app.get("/", (req, res) => {
@@ -26,10 +26,7 @@ app.get("/", (req, res) => {
 mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(process.env.MONGO_URL);
     console.log("MongoDB database is connected");
   } catch (err) {
     console.error("Database connection failed", err);

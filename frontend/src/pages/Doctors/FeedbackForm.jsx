@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { useParams } from "react-router-dom";
 import { BASE_URL, token } from "../../config";
-import HashLoader from "react-spinners/HashLoader";
+import { HashLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
 const FeedbackForm = () => {

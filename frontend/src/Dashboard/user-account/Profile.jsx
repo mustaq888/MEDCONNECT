@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import uploadImageToCloudinary from "../../utils/uploadCloudinary";
 import { BASE_URL, token } from "../../config";
 import { toast } from "react-toastify";
-import HashLoader from "react-spinners/HashLoader";
+import { HashLoader } from "react-spinners";
 
 const Profile = ({ user }) => {
   const [selectedFile, setSelectedFile] = useState(null);

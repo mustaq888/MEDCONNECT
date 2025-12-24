@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import uploadImageToCloudinary from "../utils/uploadCloudinary";
 import { BASE_URL } from "../config";
 import { toast } from "react-toastify";
-import HashLoader from "react-spinners/HashLoader";
+import { HashLoader } from "react-spinners";
 
 const Signup = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -15,7 +15,7 @@ const Signup = () => {
     email: "",
     password: "",
     photo: selectedFile,
-    gender: "",
+    gender: "other",
     role: "patient",
   });
 
